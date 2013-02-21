@@ -50,6 +50,7 @@ endif
 
 autocmd FileType python set tabstop=4 | set shiftwidth=4 | set expandtab
 autocmd FileType html set tabstop=4 | set shiftwidth=4 | set expandtab
+autocmd FileType tex set tabstop=4 | set shiftwidth=4 | set expandtab
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")

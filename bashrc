@@ -105,6 +105,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Environment variables
-export NISL_DATA=~/nisl_data
+hostname=`hostname`
+if [ $hostname = 'is149510' ]; then
+	export NISL_DATA=/vaporific/aa013911/nisl_data
+	export NISL_CACHE=/vaporific/aa013911/nisl_cache
+fi
+if [ $hostname = 'is150118' ]; then
+	export NISL_DATA=/volatile2/aa013911/nisl_data
+	export NISL_CACHE=/volatile2/aa013911/nisl_cache
+fi
 
 export PATH=$PATH:/local/bin:/home/aabraham/bin/bin
