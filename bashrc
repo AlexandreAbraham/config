@@ -114,5 +114,9 @@ if [ $hostname = 'is150118' ]; then
 	export NISL_DATA=/volatile2/aa013911/nisl_data
 	export NISL_CACHE=/volatile2/aa013911/nisl_cache
 fi
+if [ $hostname = 'is148031' ]; then
+	export NISL_DATA=/home/aa013911/nisl_data
+	export NISL_DATA=/home/aa013911/nisl_cache_
+fi
 
 export PATH=$PATH:/local/bin:/home/aabraham/bin/bin

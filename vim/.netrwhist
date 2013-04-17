@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/aabraham/mywork/tutorial/nisl/tests'
-let g:netrw_dirhist_2='/home/aabraham/work/nisl/tutorial/nisl'
-let g:netrw_dirhist_3='/home/aa013911/work/abraham_miccai2013/nisl_cache'
-let g:netrw_dirhist_4='/home/aa013911/work/parietal-python/parietal/learn/decompositions'
-let g:netrw_dirhist_5='/home/aa013911/work/abraham_miccai2013/test'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/aa013911/work/parietal-python/parietal/learn/decompositions'

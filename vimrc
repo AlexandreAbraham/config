@@ -72,7 +72,6 @@ filetype plugin on
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
-:set mouse=a
 
 function RepeatCharacter(linenum, occ)
 	let line = getline(a:linenum)
@@ -95,3 +94,5 @@ endfunction
 nnoremap <F2> :<C-U>call FixUnderline()<CR>
 
 let g:syntastic_python_checker_args='--ignore=E122,E124,E126,E127,E128'
+:set mouse=a
+:set textwidth=80
