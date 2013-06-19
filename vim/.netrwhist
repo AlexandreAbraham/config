@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/aa013911/work/parietal-python/parietal/learn/decompositions'
+let g:netrw_dirhist_2='/home/aa013911/work/scikit-learn/sklearn/utils'
+let g:netrw_dirhist_3='/home/aa013911/work/parietal-python/parietal'

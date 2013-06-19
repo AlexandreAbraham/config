@@ -31,3 +31,6 @@ function proml {
     PS4='+ '
 }
 proml
+
+# Added by Canopy installer on 2013-05-30
+# source /home/aa013911/Enthought/Canopy_64bit/User/bin/activate
