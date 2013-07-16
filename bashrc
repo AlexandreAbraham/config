@@ -125,5 +125,7 @@ if [ $hostname = 'is148031' ]; then
 	export NILEARN_CACHE=/home/aa013911/nisl_cache
 fi
 
-export PATH=$PATH:/local/bin:/home/aabraham/bin/bin
+export PATH=$PATH:/local/bin:~/bin
 export PYTHONPATH=$PYTHONPATH:~/site-packages
+# Remove trailing slash in HOME if needed
+export HOME=${HOME%/}
