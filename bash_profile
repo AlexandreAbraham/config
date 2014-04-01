@@ -32,5 +32,4 @@ function proml {
 }
 proml
 
-# Added by Canopy installer on 2013-05-30
-# source /home/aa013911/Enthought/Canopy_64bit/User/bin/activate
+# VIRTUAL_ENV_DISABLE_PROMPT=1 source ~/canopy/appdata/canopy-1.1.0.1371.rh5-x86_64/lib/python2.7/venv/scripts/posix/activate

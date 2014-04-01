@@ -125,5 +125,15 @@ if [ $hostname = 'is148031' ]; then
 	export NILEARN_CACHE=/home/aa013911/nisl_cache
 fi
 
-export PATH=$PATH:/local/bin:/home/aabraham/bin/bin
-export PYTHONPATH=$PYTHONPATH:~/site-packages
+export PATH=$PATH:/local/bin:~/bin
+#export PYTHONPATH=~/site-packages:$PYTHONPATH
+
+# Added by Canopy installer on 2013-11-06
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+# VIRTUAL_ENV_DISABLE_PROMPT=1 source /home/aa013911/Enthought/Canopy_64bit/User/bin/activate
+
+function fuck() {
+  if killall -9 "$2"; then
+    echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
+  fi
+}
