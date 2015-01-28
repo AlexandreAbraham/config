@@ -128,10 +128,6 @@ fi
 export PATH=$PATH:/local/bin:~/bin
 #export PYTHONPATH=~/site-packages:$PYTHONPATH
 
-# Added by Canopy installer on 2013-11-06
-# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-# VIRTUAL_ENV_DISABLE_PROMPT=1 source /home/aa013911/Enthought/Canopy_64bit/User/bin/activate
-
 function fuck() {
   if killall -9 "$2"; then
     echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
@@ -143,3 +139,5 @@ PERL_MM_OPT="INSTALL_BASE=/home/aa013911/perl5"; export PERL_MM_OPT;
 
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/bin/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/sys/os/glnxa64:
 XAPPLRESDIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/X11/app-defaults
+# Remove trailing slash in HOME if needed
+export HOME=${HOME%/}

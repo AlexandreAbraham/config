@@ -25,6 +25,16 @@ keys = [
         lazy.layout.shuffle_up()
     ),
 
+    # Move windows to previous or next stack
+    Key(
+        [mod, "shift"], "k",
+        lazy.layout.client_to_previous()
+    ),
+    Key(
+        [mod, "shift"], "j",
+        lazy.layout.client_to_next()
+    ),
+
     # Switch window focus to other pane(s) of stack
     Key(
         [mod], "space",
@@ -49,7 +59,7 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.nextlayout()),
-    Key([mod], "w", lazy.window.kill()),
+    Key([mod], "c", lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
@@ -86,7 +96,7 @@ screens = [
             [
                 widget.GroupBox(),
                 widget.Prompt(),
-                widget.WindowTabs(),
+                widget.TaskList(),
                 widget.Systray(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
             ],
