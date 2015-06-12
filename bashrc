@@ -107,25 +107,24 @@ fi
 # Environment variables
 hostname=`hostname`
 if [ $hostname = 'is149510' ]; then
-	export NISL_DATA=/vaporific/aa013911/nisl_data
-	export NISL_CACHE=/vaporific/aa013911/nisl_cache
 	export NILEARN_DATA=/vaporific/aa013911/nisl_data
 	export NILEARN_CACHE=/vaporific/aa013911/nisl_cache
 fi
 if [ $hostname = 'is150118' ]; then
-	export NISL_DATA=/volatile2/aa013911/nisl_data
-	export NISL_CACHE=/volatile2/aa013911/nisl_cache
 	export NILEARN_DATA=/volatile2/aa013911/nisl_data
 	export NILEARN_CACHE=/volatile2/aa013911/nisl_cache
 fi
 if [ $hostname = 'is148031' ]; then
-	export NISL_DATA=/home/aa013911/nisl_data
-	export NISL_CACHE=/home/aa013911/nisl_cache
 	export NILEARN_DATA=/home/aa013911/nisl_data
 	export NILEARN_CACHE=/home/aa013911/nisl_cache
 fi
+if [ $hostname = 'is226901' ]; then
+	export NILEARN_DATA=/volatile/aa013911/nilearn_data
+	export NILEARN_CACHE=/volatile/aa013911/nilearn_cache
+fi
 
-export PATH=$PATH:/local/bin:~/bin
-export PYTHONPATH=$PYTHONPATH:~/site-packages
+export PATH=$PATH:/local/bin:~/bin:~/site-packages/bin
+export PYTHONPATH=$PYTHONPATH:~/site-packages/
 # Remove trailing slash in HOME if needed
 export HOME=${HOME%/}
+

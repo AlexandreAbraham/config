@@ -70,6 +70,7 @@ let g:syntastic_disabled_filetypes = ['rst']
 
 filetype plugin on
 au FileType python set omnifunc=pythoncomplete#Complete
+au FileType latex set spell spelllang=en_us
 let g:SuperTabDefaultCompletionType = "context"
 
 
