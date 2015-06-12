@@ -125,6 +125,18 @@ fi
 
 export PATH=$PATH:/local/bin:~/bin:~/site-packages/bin
 export PYTHONPATH=$PYTHONPATH:~/site-packages/
+
+function fuck() {
+  if killall -9 "$2"; then
+    echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
+  fi
+}
+
+PERL_MB_OPT="--install_base \"/home/aa013911/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/aa013911/perl5"; export PERL_MM_OPT;
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/bin/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/sys/os/glnxa64:
+XAPPLRESDIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/X11/app-defaults
 # Remove trailing slash in HOME if needed
 export HOME=${HOME%/}
 
