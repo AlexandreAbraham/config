@@ -73,27 +73,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType latex set spell spelllang=en_us
 let g:SuperTabDefaultCompletionType = "context"
 
-
-function RepeatCharacter(linenum, occ)
-	let line = getline(a:linenum)
-	if strlen(line) > 0
-		let c = line[0]
-		if match(line, '^[' . c . ']\{2,}$') != -1
-			call setline(a:linenum, repeat(c, a:occ))
-		endif
-	endif
-endfunction
-
-function FixUnderline()
-	let view = winsaveview()
-	let n = strlen(getline('.'))
-	call RepeatCharacter(line('.') + 1, n)
-	call RepeatCharacter(line('.') - 1, n)
-	call winrestview(view)
-endfunction
-
-nnoremap <F2> :<C-U>call FixUnderline()<CR>
-
 let g:syntastic_python_checker_args='--ignore=E122,E124,E126,E127,E128'
 :set mouse=a
-:set textwidth=78
+:set textwidth=80

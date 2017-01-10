@@ -104,39 +104,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Environment variables
-hostname=`hostname`
-if [ $hostname = 'is149510' ]; then
-	export NILEARN_DATA=/vaporific/aa013911/nisl_data
-	export NILEARN_CACHE=/vaporific/aa013911/nisl_cache
-fi
-if [ $hostname = 'is150118' ]; then
-	export NILEARN_DATA=/volatile2/aa013911/nisl_data
-	export NILEARN_CACHE=/volatile2/aa013911/nisl_cache
-fi
-if [ $hostname = 'is148031' ]; then
-	export NILEARN_DATA=/home/aa013911/nisl_data
-	export NILEARN_CACHE=/home/aa013911/nisl_cache
-fi
-if [ $hostname = 'is226901' ]; then
-	export NILEARN_DATA=/volatile/aa013911/nilearn_data
-	export NILEARN_CACHE=/volatile/aa013911/nilearn_cache
-fi
-
-export PATH=$PATH:/local/bin:~/bin:~/site-packages/bin
-export PYTHONPATH=$PYTHONPATH:~/site-packages/
+# export PATH=$PATH:/local/bin:~/bin:~/site-packages/bin
+# export PYTHONPATH=$PYTHONPATH:~/site-packages/
 
 function fuck() {
   if killall -9 "$2"; then
     echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
   fi
 }
-
-PERL_MB_OPT="--install_base \"/home/aa013911/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/aa013911/perl5"; export PERL_MM_OPT;
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/bin/glnxa64:/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/sys/os/glnxa64:
-XAPPLRESDIR=/usr/local/MATLAB/MATLAB_Compiler_Runtime/v83/X11/app-defaults
-# Remove trailing slash in HOME if needed
-export HOME=${HOME%/}
-
